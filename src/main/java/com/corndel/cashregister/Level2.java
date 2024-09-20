@@ -15,14 +15,32 @@ public class Level2 {
    */
   public static int countCoins(List<Item> drawer) {
     // TODO
-    return 0;
+    int total = 0;
+
+
+    for(int i = drawer.size() -4; i < drawer.size(); i++){
+
+      total += drawer.get(i).getQuantity();
+
+    }
+
+    return total;
   }
 
   /**
    * Same as count coins but for *notes* instead
    */
   public static int countNotes(List<Item> drawer) {
-    // TODO
-    return 0;
+
+    int total = 0;
+
+
+    for(int i = 0; i < 5; i++){
+
+      total += drawer.get(i).getQuantity();
+
+    }
+
+    return total;
   }
 }

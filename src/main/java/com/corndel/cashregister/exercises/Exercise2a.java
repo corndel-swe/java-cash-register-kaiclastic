@@ -1,6 +1,8 @@
 package com.corndel.cashregister.exercises;
 
 import com.corndel.cashregister.exercises.models.Recipe;
+
+import java.awt.print.Book;
 import java.util.List;
 
 public class Exercise2a {
@@ -9,6 +11,15 @@ public class Exercise2a {
    */
   public static int countVeggies(List<Recipe> recipes) {
     // TODO
-    return 0;
+    int count = 0;
+
+    for (Recipe recipe : recipes) {
+      if (recipe.isVegetarian()) {
+        count++;
+      }
+    }
+
+    return count; // 3
   }
+
 }
