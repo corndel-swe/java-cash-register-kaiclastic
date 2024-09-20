@@ -3,6 +3,17 @@ package com.corndel.cashregister.exercises;
 import com.corndel.cashregister.exercises.models.Recipe;
 
 public class Exercise1a {
+
+//  String dish;
+//  int ingredients;
+//  int serves;
+//
+//  public Exercise1a(String dish, int ingredients, int serves) {
+//    this.dish = dish;
+//    this.ingredients = ingredients;
+//    this.serves = serves;
+//
+//  }
   /**
    * Accepts a recipe object and returns a summary string as below:
    * 
@@ -16,8 +27,13 @@ public class Exercise1a {
    * Note that all fields are public, so recipe.name and recipe.getName() will
    * both work, and which you use is up to your preference.
    */
+
+
+
   public static String getSummary(Recipe recipe) {
     // TODO
-    return null;
+    System.out.println(recipe.ingredients.size());
+    return recipe.name +" has " + recipe.ingredients.size() +" ingredients " +  "and serves " + recipe.servings + " people";
+
   }
 }
