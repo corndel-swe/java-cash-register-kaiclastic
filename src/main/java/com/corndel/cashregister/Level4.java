@@ -10,6 +10,30 @@ public class Level4 {
    */
   public static boolean canMakeAmount(int target, List<Item> drawer) {
     // TODO
-    return false;
+    boolean targetAchieved = false;
+
+   for(Item currentCash : drawer){
+    int value = currentCash.getValue();
+    int quantity= currentCash.getQuantity();
+
+     while (target > 0 && quantity > 0 ) {
+       // remember it must be => 0 otherwise we will never reach to zero ie achieving the target
+       if (target >= value){
+         target -= value;
+         quantity --;
+
+       } else{
+         break;
+       }
+     }
+   }
+
+   System.out.println(target);
+    if (target == 0){
+      targetAchieved = true;
+    }
+
+
+    return targetAchieved;
   }
 }
