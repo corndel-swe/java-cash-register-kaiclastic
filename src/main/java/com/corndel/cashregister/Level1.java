@@ -10,7 +10,16 @@ public class Level1 {
    */
   public static List<Item> removeItem(String name, List<Item> drawer) {
     // TODO
-    return null;
+    for(Item currentValue : drawer){
+     if(currentValue.getName().equals(name)){
+      currentValue.setQuantity(currentValue.getQuantity() -1 );
+       System.out.println(currentValue);
+     }
+
+
+
+    }
+    return drawer;
   }
 
   /**
@@ -18,7 +27,17 @@ public class Level1 {
    */
   public static List<Item> addItem(String name, List<Item> drawer) {
     // TODO
-    return null;
+
+    for(Item currentValue : drawer){
+      if(currentValue.getName().equals(name)){
+        currentValue.setQuantity(currentValue.getQuantity() +1 );
+        System.out.println(currentValue);
+      }
+
+
+
+    }
+    return drawer;
   }
 
   /**
